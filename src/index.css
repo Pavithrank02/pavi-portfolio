@@ -204,6 +204,7 @@ body.dark-mode .navbar {
   color: var(--dark-mode-text-color);
 }
 
+
 body.light-mode .navbar {
   background-color: var(--light-mode-background-color);
   color: var(--light-mode-text-color);
