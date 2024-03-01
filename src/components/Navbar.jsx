@@ -12,10 +12,10 @@ const Navbar = () => {
     navigate("/")
   }
   return (
-    <nav className="bg-light navbar navbar-expand-lg shadow-sm p-4 ">
+    <nav className="fixed-top bg-light navbar navbar-expand-lg shadow-sm p-4 ">
       <div className="container-fluid d-sm-flex flex-column flex-lg-row justify-content-center justify-content-lg-between ">
-        <div className="navbar-brand mb-4 mb-md-0 mb-lg-0" onClick={handleNavigation}>
-          <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top" />
+        <div className="navbar-brand mb-4 mb-md-0 mb-lg-0 " onClick={handleNavigation}>
+          <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top cursor:pointer" />
           <span className="ms-2 fw-bold">paviportfolio</span>
           <FontAwesomeIcon icon="fa-solid fa-moon" />
         </div>
