@@ -6,8 +6,8 @@ import { FaSun, FaMoon } from 'react-icons/fa';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Navbar = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+const Navbar = ({ isDarkMode, setIsDarkMode }) => {
+
 
   const toggleDarkMode = () => {
     document.body.classList.toggle('dark-mode', isDarkMode);

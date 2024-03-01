@@ -5,6 +5,7 @@ const DarkModeToggle = () => {
 
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
+    console.log("log")
     document.body.classList.toggle('dark-mode', !isDarkMode);
   };
 

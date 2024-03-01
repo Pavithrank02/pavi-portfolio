@@ -3,11 +3,11 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar';
 
 const SharedLayout = () => {
-
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   return (
     <div style={{ paddingTop: '64px' }}> {/* 64px is the height of the fixed navbar */}
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
       <Outlet />
     </div>
   );

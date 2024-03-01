@@ -71,9 +71,6 @@ body {
   border-bottom: 3px solid var(--clr-primary-3);
 }
 
-.bg-color {
-  background-color: #262a2e;
-}
 
 .custom-color-btn {
   background-color: #ec6e59;
@@ -129,4 +126,103 @@ body {
 /* Hide scrollbar for other browsers */
 *::-webkit-scrollbar {
   display: none;
+}
+
+/* Define variables for colors in both dark and light mode */
+:root {
+  /* Dark mode colors */
+  --dark-mode-text-color: #fff;
+  --dark-mode-background-color: #000000;
+
+  /* Light mode colors */
+  --light-mode-text-color: var(--clr-primary-1);
+  --light-mode-background-color: var(--clr-white);
+}
+
+/* Default to light mode */
+body {
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-background-color);
+}
+
+/* Toggle between dark and light mode */
+body.dark-mode {
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-background-color);
+}
+
+/* Add styles specific to dark mode */
+body.dark-mode .custom-color-btn {
+  background-color: #ec6e59;
+  border-color: #ec6e59;
+}
+
+body.dark-mode .custom-btn:hover {
+  background-color: black;
+  color: #ffffff;
+}
+
+body.dark-mode .custom-btn,
+body.dark-mode .link,
+body.dark-mode .custom-font {
+  color: var(--dark-mode-text-color);
+}
+
+/* Add styles specific to light mode */
+body.light-mode .custom-color-btn {
+  background-color: var(--clr-primary-3);
+  border-color: var(--clr-primary-3);
+}
+
+body.light-mode .custom-color-btn:hover {
+  background-color: white;
+  color: var(--clr-primary-3);
+}
+
+body.light-mode .custom-btn,
+body.light-mode .link,
+body.light-mode .custom-font {
+  color: var(--clr-primary-1);
+}
+
+/* Add styles specific to dark mode */
+body.dark-mode {
+  color: var(--dark-mode-text-color);
+  background-color: var(--dark-mode-background-color);
+}
+
+/* Add styles specific to light mode */
+body.light-mode {
+  color: var(--light-mode-text-color);
+  background-color: var(--light-mode-background-color);
+}
+
+/* Toggle between dark and light mode */
+
+body.dark-mode .navbar {
+  background-color: var(--dark-mode-background-color);
+  color: var(--dark-mode-text-color);
+}
+
+body.light-mode .navbar {
+  background-color: var(--light-mode-background-color);
+  color: var(--light-mode-text-color);
+}
+
+body.dark-mode {
+  background-color: var(--dark-mode-background-color);
+  color: var(--dark-mode-text-color);
+  border-color: var(--clr-primary-3);
+}
+
+body.light-mode .card {
+  background-color: var(--light-mode-background-color);
+  color: var(--light-mode-text-color);
+}
+
+
+.icon-container {
+  cursor: pointer;
+  font-size: 24px;
+  /* Adjust the size as needed */
 }
