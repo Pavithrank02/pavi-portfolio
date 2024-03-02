@@ -7,7 +7,7 @@ function Project({ id, image, name, stack, live, source, desc }) {
     return (
         <motion.div animate={{ x: 50, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2 }} >
             <div className=" mb-5" style={{ maxWidth: '900px' }}>
-                <div className="g-0 d-flex flex-column flex-lg-row align-items-center">
+                <div className="g-0 d-flex flex-column flex-lg-row align-items-center sm-align-items-center">
                     <div className="">
                         <img src={image} className="img-fluid rounded-start project-img" alt={name} />
                     </div>

@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <section className=" p-5 min-vh-100">
       <div className='container-fluid'>
-        <div className='d-sm-flex align-items-center justify-content-between'>
+        <div className='d-sm-flex align-items-center justify-content-around md-flex'>
           <motion.div whileHover={{ scale: 1.5 }} className='ms-sm-5 ps-sm-5 d-flex flex-column text-center align-items-center align-items-lg-start'>
             <h1 className=''>Hi, I'm Pavithran K</h1>
             <h1 className='fw-bold custom-font'>Frontend Developer.</h1>

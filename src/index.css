@@ -62,6 +62,7 @@ body {
 
 .link:hover {
   color: var(--clr-primary-3);
+  transform: scale(1.5);
   /* color: #f58f7d; */
 }
 
@@ -166,6 +167,7 @@ body.dark-mode .custom-btn,
 body.dark-mode .link,
 body.dark-mode .custom-font {
   color: var(--dark-mode-text-color);
+
 }
 
 /* Add styles specific to light mode */
@@ -183,6 +185,7 @@ body.light-mode .custom-btn,
 body.light-mode .link,
 body.light-mode .custom-font {
   color: var(--clr-primary-1);
+  transform: scale(1.1);
 }
 
 /* Add styles specific to dark mode */
