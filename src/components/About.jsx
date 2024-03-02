@@ -1,6 +1,5 @@
 import React from 'react'
 import { FaBootstrap } from 'react-icons/fa'
-import { SiFlutter } from 'react-icons/si'
 import { motion } from 'framer-motion'
 
 
