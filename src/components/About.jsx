@@ -2,7 +2,7 @@ import React from 'react';
 import { FaBootstrap, FaLinkedin, FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-import resume from '../assets/Pavithran Resume.pdf';
+import resume from '../assets/PavithranKResume.pdf';
 
 const About = () => {
   return (
