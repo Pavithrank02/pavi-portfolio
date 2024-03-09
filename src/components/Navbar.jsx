@@ -59,8 +59,11 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           <NavLink to="/about" className="link me-5">
             About
           </NavLink>
-          <NavLink to="/projects" className="link">
+          <NavLink to="/projects" className="link me-5">
             Projects
+          </NavLink>
+          <NavLink to="/articles" className="link me-5">
+            Articles
           </NavLink>
         </div>
 
