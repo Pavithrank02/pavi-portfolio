@@ -7,6 +7,7 @@ import youtube from './assets/images/Youtube.png'
 import IMDB from './assets/images/IMDB.png'
 import NetFlix from './assets/images/Netlfix.png'
 import Talk from './assets/images/Talk.png'
+import Shop from './assets/images/ecommerce.png'
 // in progress projects
 
 // import Servista from './assets/portfolioImages/servista.PNG'
@@ -22,6 +23,16 @@ const ProjectsData = [
     source: "https://github.com/Pavithrank02/talk-chat",
     description:
       "MERN Stack based chat application which is used by user for chatting and once the user are registered they can able to chat with other registered users. All user information and chats will be handled in Mongodb. User interaction will be made through Socket.io.",
+  },
+  {
+    id: "E-Commerce",
+    img: Shop,
+    name: "ShopInOut App",
+    stack: ["< React.js /> ", "< JavaScript /> ", "< Redux /> ", "< Tailwind CSS />",],
+    live: "https://shopinout.netlify.app/",
+    source: "https://github.com/Pavithrank02/shopping-cart",
+    description:
+      "React and Redux based E-Commerse website from which online shoping can be performed with easy steps.",
   },
   {
     id: "NetFlix_GPT",
