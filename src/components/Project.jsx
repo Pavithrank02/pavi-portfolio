@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AiOutlineGithub } from 'react-icons/ai'
 import { BiLinkExternal } from 'react-icons/bi'
-import { motion } from 'framer-motion'
-
+import { motion, useAnimation } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
+import '../App.css'
 function Project({ id, image, name, stack, live, source, desc }) {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start('show');
+        } else {
+            controls.start('hidden');
+        }
+    }, [controls, inView]);
+
+    const variants = {
+        hidden: { opacity: 0, scale: 0.8 },
+        show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+    };
     return (
-        <motion.div animate={{ x: 50, scale: 1 }} initial={{ scale: 0 }} transition={{ type: "tween", duration: 2 }} >
-            <div className=" mb-5" style={{ maxWidth: '900px' }}>
+        <motion.div ref={ref} initial="hidden" variants={variants} animate={controls} transition={{ type: "tween", duration: 2 }}>
+            <div className=" mb-5 " style={{ maxWidth: '900px' }}>
                 <div className="g-0 d-flex flex-column flex-lg-row align-items-center sm-align-items-center">
                     <div className="">
                         <img src={image} className="img-fluid rounded-start project-img" alt={name} />

@@ -3,15 +3,15 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 import { FaSun, FaMoon } from 'react-icons/fa';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { Link as ScrollLink } from 'react-scroll';
+import '../App.css'
 const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   const [isMobileView, setIsMobileView] = useState(false); // State to track mobile view
 
   const toggleDarkMode = () => {
-    document.body.classList.toggle('dark-mode', isDarkMode);
-    document.body.classList.toggle('light-mode', !isDarkMode);
     setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+    document.body.classList.toggle('light-mode', isDarkMode);
   };
 
   const navigate = useNavigate();
@@ -43,9 +43,8 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
       <div className="container-fluid d-sm-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
         {!isMobileView && (
           <div className="navbar-brand mb-4 mb-md-0 mb-lg-0" onClick={handleNavigation}>
-            <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top cursor:pointer" />
+            <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top cursor-pointer" />
             <span className="ms-2 fw-bold">paviportfolio</span>
-            <FontAwesomeIcon icon="fa-solid fa-moon" />
           </div>
         )}
         <div onClick={toggleDarkMode} className="icon-container">
@@ -54,31 +53,63 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         <div className="d-flex flex-row">
           <motion.div whileHover={{ scale: 1.2 }}>
-            <NavLink to="/" className="link me-5">
+            <ScrollLink
+              to="home"
+              smooth={true}
+              duration={1000}
+              className="link me-5"
+              spy={true}
+              exact="true"
+              hashSpy={true}
+              activeClass="active-link"
+            >
               Home
-            </NavLink>
+            </ScrollLink>
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }}>
-
-            <NavLink to="/about" className="link me-5">
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={1000}
+              className="link me-5"
+              spy={true}
+              exact="true"
+              hashSpy={true}
+              activeClass="active-link"
+            >
               About
-            </NavLink>
+            </ScrollLink>
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }}>
-
-            <NavLink to="/projects" className="link me-5">
+            <ScrollLink
+              to="project"
+              smooth={true}
+              duration={1000}
+              className="link me-5"
+              spy={true}
+              exact="true"
+              hashSpy={true}
+              activeClass="active-link"
+            >
               Projects
-            </NavLink>
+            </ScrollLink>
           </motion.div>
           <motion.div whileHover={{ scale: 1.2 }}>
-
-            <NavLink to="/articles" className="link me-5">
+            <ScrollLink
+              to="articles"
+              smooth={true}
+              duration={1000}
+              className="link me-5"
+              spy={true}
+              exact="true"
+              hashSpy={true}
+              activeClass="active-link"
+            >
               Articles
-            </NavLink>
+            </ScrollLink>
           </motion.div>
         </div>
 
-        {/* Check if not in mobile view, then display contact button */}
         {!isMobileView && (
           <motion.div whileHover={{ scale: 1.2, rotate: 360 }}>
             <NavLink to="/contact" className="link">

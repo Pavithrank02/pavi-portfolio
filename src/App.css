@@ -13,6 +13,21 @@
   }
 }
 
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  /* Add more styles as needed */
+}
+
+.active-link {
+  color: #ff0000;
+  /* Example: Red color for the active link */
+  text-decoration: underline;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,6 +47,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
