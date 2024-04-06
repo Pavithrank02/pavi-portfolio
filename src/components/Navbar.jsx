@@ -52,19 +52,30 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
           {isDarkMode ? <FaSun /> : <FaMoon />}
         </div>
 
-        <div className="">
-          <NavLink to="/" className="link me-5">
-            Home
-          </NavLink>
-          <NavLink to="/about" className="link me-5">
-            About
-          </NavLink>
-          <NavLink to="/projects" className="link me-5">
-            Projects
-          </NavLink>
-          <NavLink to="/articles" className="link me-5">
-            Articles
-          </NavLink>
+        <div className="d-flex flex-row">
+          <motion.div whileHover={{ scale: 1.2 }}>
+            <NavLink to="/" className="link me-5">
+              Home
+            </NavLink>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2 }}>
+
+            <NavLink to="/about" className="link me-5">
+              About
+            </NavLink>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2 }}>
+
+            <NavLink to="/projects" className="link me-5">
+              Projects
+            </NavLink>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.2 }}>
+
+            <NavLink to="/articles" className="link me-5">
+              Articles
+            </NavLink>
+          </motion.div>
         </div>
 
         {/* Check if not in mobile view, then display contact button */}
