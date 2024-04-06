@@ -23,9 +23,17 @@
 }
 
 .active-link {
-  color: #ff0000;
+  color: #ff0000 !important;
   /* Example: Red color for the active link */
   text-decoration: underline;
+}
+
+#home,
+#about,
+#project,
+#contact,
+#articles {
+  min-height: 100vh;
 }
 
 .App-header {

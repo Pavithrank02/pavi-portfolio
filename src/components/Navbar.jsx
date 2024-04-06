@@ -112,9 +112,18 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
 
         {!isMobileView && (
           <motion.div whileHover={{ scale: 1.2, rotate: 360 }}>
-            <NavLink to="/contact" className="link">
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={1000}
+              className="link me-5"
+              spy={true}
+              exact="true"
+              hashSpy={true}
+              activeClass="active-link"
+            >
               <button className="mt-5 m-lg-0 btn custom-btn fw-bold">Contact me</button>
-            </NavLink>
+            </ScrollLink>
           </motion.div>
         )}
       </div>
