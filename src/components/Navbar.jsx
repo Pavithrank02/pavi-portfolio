@@ -39,7 +39,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   }, []);
 
   return (
-    <nav className="fixed-top navbar navbar-expand-lg shadow-sm p-4">
+    <nav className="fixed-top navbar navbar-expand-lg shadow-sm p-2">
       <div className="container-fluid d-sm-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
         {!isMobileView && (
           <div className="navbar-brand mb-4 mb-md-0 mb-lg-0" onClick={handleNavigation}>
@@ -52,21 +52,20 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
         </div>
 
         <div className="d-flex flex-row">
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2, cursor: 'pointer' }}>
             <ScrollLink
               to="home"
               smooth={true}
               duration={1000}
               className="link me-5"
               spy={true}
-              exact="true"
               hashSpy={true}
               activeClass="active-link"
             >
               Home
             </ScrollLink>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2, cursor: 'pointer' }}>
             <ScrollLink
               to="about"
               smooth={true}
@@ -80,7 +79,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               About
             </ScrollLink>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2, cursor: 'pointer' }}>
             <ScrollLink
               to="project"
               smooth={true}
@@ -94,7 +93,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
               Projects
             </ScrollLink>
           </motion.div>
-          <motion.div whileHover={{ scale: 1.2 }}>
+          <motion.div whileHover={{ scale: 1.2, cursor: 'pointer' }}>
             <ScrollLink
               to="articles"
               smooth={true}

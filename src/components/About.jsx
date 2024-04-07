@@ -7,7 +7,9 @@ import resume from '../assets/PavithranKResume.pdf';
 
 const About = () => {
   const controls = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({
+    threshold: 0.5      // Optional: Remove if you want the animation to trigger every time 50% is visible
+  });
 
   useEffect(() => {
     if (inView) {
@@ -23,7 +25,7 @@ const About = () => {
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants} className="section">
+    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants} >
       <div className='container-fluid pt-5 d-flex flex-column align-items-center min-vh-100'>
         <motion.p animate={{ x: 0, scale: 1 }}
           initial={{ scale: 0 }}

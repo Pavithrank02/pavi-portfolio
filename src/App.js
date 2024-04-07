@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import SharedLayout from './components/SharedLayout';
 import Home from './components/Home'
 import About from './components/About'
@@ -16,7 +17,18 @@ const containerVariants = {
     }
   }
 };
+
 function App() {
+  useEffect(() => {
+    // Automatically scroll to the "home" section on app load
+    const homeSection = document.getElementById('home');
+    if (homeSection) {
+      window.scrollTo({
+        top: homeSection.offsetTop,
+        behavior: 'smooth',
+      });
+    }
+  }, []);
 
   return (
     <BrowserRouter>

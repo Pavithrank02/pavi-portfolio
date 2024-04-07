@@ -16,16 +16,20 @@
 .section {
   min-height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10vh;
-  /* Add more styles as needed */
+  flex-direction: column;
+
+}
+
+.shared-layout-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* Other styling as needed */
 }
 
 .active-link {
-  color: #ff0000 !important;
+  color: rgb(52, 125, 219) !important;
   /* Example: Red color for the active link */
-  text-decoration: underline;
 }
 
 #home,
