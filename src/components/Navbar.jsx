@@ -39,7 +39,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
   }, []);
 
   return (
-    <nav className="fixed-top navbar navbar-expand-lg shadow-sm p-2">
+    <nav className="fixed-top  navbar navbar-expand-lg shadow-sm p-2 ">
       <div className="container-fluid d-sm-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
         {!isMobileView && (
           <div className="navbar-brand mb-4 mb-md-0 mb-lg-0" onClick={handleNavigation}>
