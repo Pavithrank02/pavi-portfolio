@@ -138,7 +138,7 @@ body {
 /* Define variables for colors in both dark and light mode */
 :root {
   /* Dark mode colors */
-  --dark-mode-text-color: #fff;
+  --dark-mode-text-color: var(--clr-primary-5);
   --dark-mode-background-color: #000000;
 
   /* Light mode colors */
