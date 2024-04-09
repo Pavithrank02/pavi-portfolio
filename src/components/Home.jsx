@@ -63,7 +63,7 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-        <div className='d-flex flex-column  text-center justify-content-center '>
+        <div className='d-flex flex-column  text-center justify-content-center my-5'>
           <h2>"Quote of The Day" by {quote.author}</h2>
           <h5>{quote.body}</h5>
 
