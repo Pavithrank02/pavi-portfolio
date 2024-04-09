@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MediumArticles from './components/MediumArticles';
 import './App.css'
+import Footer from './components/Footer';
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -49,6 +50,9 @@ function App() {
           </div>
           <div id="articles" className="section">
             <MediumArticles />
+          </div>
+          <div >
+            <Footer />
           </div>
         </motion.div>
       </div>

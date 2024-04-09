@@ -297,6 +297,69 @@ body.light-mode .card {
   font-weight: 800;
 }
 
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+body.light-mode .footer {
+  background-color: var(--light-mode-background-color);
+  color: var(--light-mode-text-color);
+  padding: 20px 0;
+}
+
+body.dark-mode .footer {
+  background-color: var(--dark-mode-background-color);
+  color: var(--dark-mode-text-color);
+  padding: 20px 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__section {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer__sectionTitle {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer__sectionLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer__sectionLinks li {
+  margin-bottom: 5px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.footer__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer__copyright {
+  font-size: 14px;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
