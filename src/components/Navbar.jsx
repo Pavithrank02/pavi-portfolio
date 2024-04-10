@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 import { FaSun, FaMoon } from 'react-icons/fa';
@@ -12,12 +11,6 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     setIsDarkMode(!isDarkMode);
     document.body.classList.toggle('dark-mode', !isDarkMode);
     document.body.classList.toggle('light-mode', isDarkMode);
-  };
-
-  const navigate = useNavigate();
-
-  const handleNavigation = () => {
-    navigate('/');
   };
 
   // Function to check if screen size is in mobile view
@@ -42,10 +35,15 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     <nav className="fixed-top  navbar navbar-expand-lg shadow-sm p-2 ">
       <div className="container-fluid d-sm-flex flex-column flex-lg-row justify-content-center justify-content-lg-between">
         {!isMobileView && (
-          <div className="navbar-brand mb-4 mb-md-0 mb-lg-0" onClick={handleNavigation}>
-            <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top cursor-pointer" />
-            <span className="ms-2 fw-bold">paviportfolio</span>
-          </div>
+          <ScrollLink
+            to="home"
+
+          >
+            <div className="navbar-brand mb-4 mb-md-0 mb-lg-0">
+              <img src={logo} alt="logo" width="30" height="auto" className="d-inline-block align-text-top cursor-pointer" />
+              <span className="ms-2 fw-bold">paviportfolio</span>
+            </div>
+          </ScrollLink>
         )}
         <div onClick={toggleDarkMode} className="icon-container">
           {isDarkMode ? <FaSun /> : <FaMoon />}
