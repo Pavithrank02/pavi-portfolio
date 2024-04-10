@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Player } from '@lottiefiles/react-lottie-player';
-import { NavLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
@@ -41,15 +41,19 @@ const Home = () => {
   };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={variants} className="section">
-      <section className="p-5 min-vh-100 mt-10">
+    <motion.div initial="hidden" animate={controls} variants={variants} className="section">
+      <section ref={ref} className="p-5 min-vh-100 mt-10">
         <div className='container-fluid'>
           <div className='d-sm-flex align-items-center justify-content-around md-flex'>
             <motion.div whileHover={{ scale: 1.5 }} className='ms-sm-5 ps-sm-5 d-flex flex-column text-center align-items-center align-items-lg-start'>
               <h1 className=''>Hi, I'm Pavithran K</h1>
               <h1 className='fw-bold custom-font'>Frontend Developer.</h1>
               <p className='pt-5'>Frontend Development / ReactJS </p>
-              <NavLink to='/projects'><button className='btn btn-primary custom-btn ps-5 pe-5 fw-bold mt-2'>My Work</button></NavLink>
+              <ScrollLink to='project'>
+                <button className='btn btn-primary custom-btn ps-5 pe-5 fw-bold mt-2'>
+                  My Work
+                </button>
+              </ScrollLink>
             </motion.div>
 
             <motion.div drag whileDrag={{ scale: 1 }} dragConstraints={{ right: 10, left: 50 }}>
