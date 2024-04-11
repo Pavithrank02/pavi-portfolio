@@ -13,7 +13,7 @@ const Navbar = ({ isDarkMode, setIsDarkMode }) => {
     document.body.classList.toggle('light-mode', isDarkMode);
   };
 
-  // Function to check if screen size is in mobile view
+  // Function to check if screen size is in mobile 
   const checkMobileView = () => {
     if (window.innerWidth <= 968) {
       setIsMobileView(true);
