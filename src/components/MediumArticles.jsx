@@ -45,7 +45,6 @@ const MediumArticles = () => {
             <div className="article" key={index}>
               <h3 className="article-title">{article.title}</h3>
               <p className="article-date">{new Date(article.pubDate).toLocaleDateString()}</p>
-              {/* <p className="article-summary">{article.description}</p> */}
               <a className="read-article-btn" href={article.link} target="_blank" rel="noopener noreferrer">Read Article</a>
             </div>
           ))}
