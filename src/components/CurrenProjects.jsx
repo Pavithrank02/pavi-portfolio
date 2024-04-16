@@ -2,7 +2,6 @@ import React, { useEffect } from 'react'
 import data from '../data.js'
 import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-// import InprogressProjects from './InprogressProjects.js'
 import Project from './Project.jsx'
 
 const Projects = () => {
