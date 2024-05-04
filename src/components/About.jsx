@@ -8,7 +8,7 @@ import resume from '../assets/PavithranKResume.pdf';
 const About = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    threshold: 0.5      // Optional: Remove if you want the animation to trigger every time 50% is visible
+    threshold: 0.5      // Optional Remove if you want the animation to trigger every time 50% is visible
   });
 
   useEffect(() => {
