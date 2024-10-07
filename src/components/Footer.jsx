@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { BiLogoGmail } from "react-icons/bi";
-import '../App.css'; // CSS file for styling
+import '../App.css'; // CSS file for stylings
 
 function Footer() {
   return (
