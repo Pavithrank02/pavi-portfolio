@@ -8,6 +8,8 @@ import IMDB from './assets/images/IMDB.png'
 import NetFlix from './assets/images/Netlfix.png'
 import Talk from './assets/images/Talk.png'
 import Shop from './assets/images/ecommerce.png'
+import Inventory from './assets/images/Inventory.png'
+import Billing from './assets/images/Billing.png'
 // in progress projects
 
 // import Servista from './assets/portfolioImages/servista.PNG'
@@ -15,14 +17,24 @@ import Shop from './assets/images/ecommerce.png'
 
 const ProjectsData = [
   {
-    id: "talk-chat",
-    img: Talk,
-    name: "Talk-Chat App",
+    id: "Inventory",
+    img: Inventory,
+    name: "Custom Inventory System for Manufacturing Optimization",
     stack: ["< React.js /> ", " < JavaScript /> ", " < MERN /> ", " < MongoDb /> ", " < Tailwind CSS />",],
-    live: "https://talk-chat-nvpa.onrender.com",
-    source: "https://github.com/Pavithrank02/talk-chat",
+    live: "https://sritex-inventory.netlify.app/",
+    source: "https://github.com/Pavithrank02/sritextweb",
     description:
-      "MERN Stack based chat application which is used by user for chatting and once the user are registered they can able to chat with other registered users. All user information and chats will be handled in Mongodb. User interaction will be made through Socket.io.",
+      "React.js project featuring Redux store integration and API-based custom inventory management system. Designed and implemented intuitive user interfaces with React.js and Tailwind CSS to ensure a seamless and responsive user experience across devices.",
+  },
+  {
+    id: "Billing",
+    img: Billing,
+    name: "Billing System and Industry Website",
+    stack: ["< React.js /> ", " < JavaScript /> ", " < MERN /> ", " < MongoDb /> ", " < Tailwind CSS />",],
+    live: "https://srirangalaser.com/",
+    source: "https://github.com/Pavithrank02/srirangaweb",
+    description:
+      "React-based application enabling personalized user access to a billing system with automated, user-specific document generation capabilities.Implemented user authentication to grant access based on login credentials tailored to different billing tiers, ensuring secure and personalized billing experiences.Automated user-specific document generation, leading to a 35% improvement in operational efficiency.",
   },
   {
     id: "E-Commerce",
@@ -33,6 +45,16 @@ const ProjectsData = [
     source: "https://github.com/Pavithrank02/shopping-cart",
     description:
       "React and Redux based E-Commerse website from which online shoping can be performed with easy steps.",
+  },
+  {
+    id: "talk-chat",
+    img: Talk,
+    name: "Talk-Chat App",
+    stack: ["< React.js /> ", " < JavaScript /> ", " < MERN /> ", " < MongoDb /> ", " < Tailwind CSS />",],
+    live: "https://talk-chat-nvpa.onrender.com",
+    source: "https://github.com/Pavithrank02/talk-chat",
+    description:
+      "MERN Stack based chat application which is used by user for chatting and once the user are registered they can able to chat with other registered users. All user information and chats will be handled in Mongodb. User interaction will be made through Socket.io.",
   },
   {
     id: "NetFlix_GPT",
