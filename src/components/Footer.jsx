@@ -6,6 +6,8 @@ import { BiLogoGmail } from "react-icons/bi";
 import '../App.css'; // CSS file for stylings
 
 function Footer() {
+  const date = new Date()
+  console.log(date)
   return (
     <footer className="footer">
       <div className="footer__container">
@@ -94,7 +96,7 @@ function Footer() {
       </div>
       <div className="footer__bottom">
         <div className="footer__logo">Pavithran K</div>
-        <div className="footer__copyright">© 2024 </div>
+        <div className="footer__copyright">© {date.getFullYear()} </div>
       </div>
     </footer>
   );
